@@ -106,9 +106,9 @@ const checkRequestsQueries = async (request, response, next) => {
 };
 
 const checkRequestsBody = (request, response, next) => {
-  const { id, todo, category, priority, status, dueDate } = request.body;
+  const { id, todo, category, priority, status, dueDate } = request;
   const { todoId } = request.params;
-  console.log(id, todo, category, priority, status, dueDate);
+  console.log(request.body);
 
   if (category !== undefined) {
     categoryArray = ["WORK", "HOME", "LEARNING"];
